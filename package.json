@@ -1,0 +1,20 @@
+{
+  "name": "pizzaapp",
+  "version": "1.0.0",
+  "description": "Realtime pizza app",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon server.js",
+    "start": " node server.js"
+  },
+  "author": "Rajnish",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "express-ejs-layouts": "^2.5.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  }
+}
