@@ -4,7 +4,9 @@ const app = express();
 const ejs = require("ejs");
 const expresslayouts = require("express-ejs-layouts");
 const path = require("path");
-
+const session = require("express-session");
+const dotenv = require("dotenv");
+const { Cookie } = require("express-session");
 const PORT = process.env.PORT || 3000;
 const url =
   "mongodb+srv://raj:Pakistan6342@cluster0.xcdn6.mongodb.net/pizzaapp?retryWrites=true&w=majority";
@@ -14,6 +16,18 @@ mongoose.connect(
   () => {
     console.log("Mongoose Connected");
   }
+);
+
+dotenv.config();
+//session config
+
+app.use(
+  session({
+    secret: process.env.COOKIE_SECRET,
+    resave:false,
+    saveUninitialized:falsem
+    Cookie:{maxAge:2000*60*60*24},
+  })
 );
 
 app.use(express.static("public"));
