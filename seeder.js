@@ -34,10 +34,8 @@ const importData = async () => {
 // Delete data
 const deleteData = async () => {
   try {
-    await Bootcamp.deleteMany();
-    await Course.deleteMany();
-    await User.deleteMany();
-    await Review.deleteMany();
+    await Menu.deleteMany();
+
     console.log("Data Destroyed...".red.inverse);
     process.exit();
   } catch (err) {
