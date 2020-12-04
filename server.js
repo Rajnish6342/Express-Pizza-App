@@ -7,7 +7,6 @@ const path = require("path");
 const session = require("express-session");
 const dotenv = require("dotenv");
 const flash = require("express-flash");
-const { urlencoded } = require("express");
 const passport = require("passport");
 const MongoDbStore = require("connect-mongo")(session);
 const PORT = process.env.PORT || 3000;

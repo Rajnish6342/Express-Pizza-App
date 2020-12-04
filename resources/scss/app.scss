@@ -1,6 +1,6 @@
-@import './variables';
-@import '~noty/src/noty.scss';
-@import '~noty/src/themes/mint.scss';
+@import "./variables";
+@import "~noty/src/noty.scss";
+@import "~noty/src/themes/mint.scss";
 
 nav li:last-child a {
   background: $primary;
@@ -59,4 +59,8 @@ section.cart {
       color: $primary-hover;
     }
   }
+}
+
+a.link {
+  color: $primary;
 }

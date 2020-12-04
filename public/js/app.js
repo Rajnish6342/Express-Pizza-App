@@ -6037,8 +6037,8 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
 
 
-var addToCart = document.querySelectorAll('.add-to-cart');
-var cartCounter = document.getElementById('cartCounter');
+var addToCart = document.querySelectorAll(".add-to-cart");
+var cartCounter = document.getElementById("cartCounter");
 
 function updateCart(_x) {
   return _updateCart.apply(this, arguments);
@@ -6053,15 +6053,15 @@ function _updateCart() {
           case 0:
             _context.prev = 0;
             _context.next = 3;
-            return axios__WEBPACK_IMPORTED_MODULE_1___default.a.post('/update-cart', pizza);
+            return axios__WEBPACK_IMPORTED_MODULE_1___default.a.post("/update-cart", pizza);
 
           case 3:
             res = _context.sent;
             cartCounter.innerText = res.data.totalQty;
             new noty__WEBPACK_IMPORTED_MODULE_2___default.a({
-              type: 'success',
+              type: "success",
               timeout: 1000,
-              text: 'Item Added'
+              text: "Item Added"
             }).show();
             _context.next = 11;
             break;
@@ -6070,9 +6070,9 @@ function _updateCart() {
             _context.prev = 8;
             _context.t0 = _context["catch"](0);
             new noty__WEBPACK_IMPORTED_MODULE_2___default.a({
-              type: 'warning',
+              type: "warning",
               timeout: 1000,
-              text: 'Not Added'
+              text: "Not Added"
             }).show();
 
           case 11:
@@ -6086,11 +6086,18 @@ function _updateCart() {
 }
 
 addToCart.forEach(function (btn) {
-  btn.addEventListener('click', function (e) {
+  btn.addEventListener("click", function (e) {
     var pizza = JSON.parse(btn.dataset.pizza);
     updateCart(pizza);
   });
 });
+var alertMsg = document.querySelector("#success-alert");
+
+if (alertMsg) {
+  setTimeout(function () {
+    alertMsg.remove();
+  }, 2000);
+}
 
 /***/ }),
 
